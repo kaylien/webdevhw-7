@@ -55,21 +55,23 @@ exports.config = {
       includePaths: ["node_modules/bootstrap/scss"],
       precision: 8
     }
-  }
+  },
 
-  modules: {
+  "modules": {
     autoRequire: {
       "js/app.js": ["js/app"]
     }
   },
 
   npm: {
-    enabled: true
-  }
-};
+    enabled: true,
 
     globals: {
       $: 'jquery',
       jQuery: 'jquery',
+      Popper: 'popper.js',
       bootstrap: 'bootstrap'
     }
+  }
+};
+

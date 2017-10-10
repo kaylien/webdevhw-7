@@ -393,4 +393,16 @@ defmodule Microblog.Blog do
   def change_following(%Following{} = following) do
     Following.changeset(following, %{})
   end
+
+  alias Microblog.Blog.User
+
+  @doc """
+  Returns the list of users.
+
+  ## Examples
+
+      iex> list_users()
+      [%User{}, ...]
+
+  """
 end

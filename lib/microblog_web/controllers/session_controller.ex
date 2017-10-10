@@ -8,7 +8,7 @@ defmodule MicroblogWeb.SessionController do
  
     if user do
        post = conn.assigns[:current_post]
-       # Microblog.Blog.update_post(post, %{user_id: user.id})
+        Microblog.Blog.update_post(post, %{user_id: user.id})
  
       conn
       |> put_session(:user_id, user.id)

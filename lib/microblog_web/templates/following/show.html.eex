@@ -2,7 +2,18 @@
 
 <ul>
 
+  <li>
+    <strong>User:</strong>
+    <%= @following.user_id %>
+  </li>
+
+  <li>
+    <strong>Follows user:</strong>
+    <%= @following.follows_user_id %>
+  </li>
+
 </ul>
+
 
 <span><%= link "Edit", to: following_path(@conn, :edit, @following) %></span>
 <span><%= link "Back", to: following_path(@conn, :index) %></span>

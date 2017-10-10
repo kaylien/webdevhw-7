@@ -3,9 +3,9 @@ defmodule MicroblogWeb.FollowingControllerTest do
 
   alias Microblog.Blog
 
-  @create_attrs %{}
-  @update_attrs %{}
-  @invalid_attrs %{}
+  @create_attrs %{follows_user_id: "some follows_user_id", user_id: "some user_id"}
+  @update_attrs %{follows_user_id: "some updated follows_user_id", user_id: "some updated user_id"}
+  @invalid_attrs %{follows_user_id: nil, user_id: nil}
 
   def fixture(:following) do
     {:ok, following} = Blog.create_following(@create_attrs)
@@ -60,7 +60,7 @@ defmodule MicroblogWeb.FollowingControllerTest do
       assert redirected_to(conn) == following_path(conn, :show, following)
 
       conn = get conn, following_path(conn, :show, following)
-      assert html_response(conn, 200)
+      assert html_response(conn, 200) =~ "some updated follows_user_id"
     end
 
     test "renders errors when data is invalid", %{conn: conn, following: following} do
