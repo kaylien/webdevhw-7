@@ -1,20 +1,13 @@
-# Microblog
+"Add a section to your README.md describing the expected behavior for Likes and how well your app implements that behavior.
 
-To start your Phoenix server:
+Add a section to your README.md describing how to use your deploy script.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+This should include your README.md with the above sections and links to your Git repo and deployed app."
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+When you click on the show for a post as a logged in user, there will be a 'like' button, if you hadn't already liked the post. If you click the button, your email will be added to a list of users who had liked the post. If you click unlike, you will unlike the post and your name will be removed. My app follows this expected behavior.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+My deploy script is run just by putting 'bash deploy.sh' into the command line.
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+http://microblog.kaylienphan.com/
+http://microblog.kaylienphan.com/posts
+https://github.com/kaylien/webdevhw5.git

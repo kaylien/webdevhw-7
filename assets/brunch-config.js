@@ -47,17 +47,16 @@ exports.config = {
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/vendor/]
+    },
+    sass: {
+      options: {
+        includePaths: ["node_modules/bootstrap/scss"],
+        precision: 8
+      }
     }
   },
 
-   sass: {
-    options: {
-      includePaths: ["node_modules/bootstrap/scss"],
-      precision: 8
-    }
-  },
-
-  "modules": {
+  modules: {
     autoRequire: {
       "js/app.js": ["js/app"]
     }
@@ -65,11 +64,10 @@ exports.config = {
 
   npm: {
     enabled: true,
-
     globals: {
       $: 'jquery',
-      jQuery: 'jquery',
       Popper: 'popper.js',
+      jQuery: 'jquery',
       bootstrap: 'bootstrap'
     }
   }

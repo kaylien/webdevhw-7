@@ -1,0 +1,9 @@
+mix phx.gen.html Blog User users username:string email:string
+mix phx.gen.html Blog Post posts user_id:references:users post:text
+mix phx.gen.html Blog Following userfollows user_id:references:users follows_user_id:references:users
+
+mix phx.gen.html Blog Post posts post:text user_id:string 
+mix phx.gen.html Blog Following userfollows user_id:string follows_user_id:string
+
+
+mix ecto.migrate
