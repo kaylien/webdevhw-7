@@ -53,11 +53,6 @@ let socket = new Socket("/socket", {params: {token: window.userToken}})
 
 function onRecievePost(data) {
 
-	//if (data.id === undefined || data.post === undefined || data.email === undefined) {
-	//	return;
-	//}
-	//console.log(data)
-
    let string = `<tr>
       <td>${data.post}</td>
       <td>${data.userID}</td>
@@ -69,7 +64,6 @@ function onRecievePost(data) {
       </td>
     </tr>`
 
-    //let tbody = $('body > div > div:nth-child(2) > div > table > tbody')
     let tbody = $('body > div:nth-child(3) > div > table > tbody')
 
     if (!tbody) {
@@ -102,15 +96,11 @@ function onPageLoad() {
 
 		let postId = location.pathname.split('/')[2]
 		let post = $('body > div:nth-child(3) > div > ul > li:nth-child(1)').text().slice(11)
-		let email = window.currUserEmail
 		let userID = window.currUserId
-
-		console.log('Sending off a post:', email,post, postId, userID)
 
 		channel.push("ping", {
 			id: postId,
 			post: post,
-			email: email,
 			userID: userID
 		});
 
