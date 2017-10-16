@@ -208,6 +208,7 @@ defmodule Microblog.Blog do
   end
 
   @doc """
+  
   Deletes a User.
   ## Examples
       iex> delete_user(user)

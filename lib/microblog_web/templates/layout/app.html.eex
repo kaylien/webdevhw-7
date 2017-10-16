@@ -9,6 +9,7 @@
 
     <title>Hello Microblog!</title>
     <script src="/js/app.js" type="text/javascript"></script>
+    <script>window.userToken = "<%= assigns[:user_token] %>";</script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <%# <link rel="stylesheet" href="/css/app-c74cbb59dd9f0e78c2a9064258aa52b7.css?vsn=d"> %>
   </head>

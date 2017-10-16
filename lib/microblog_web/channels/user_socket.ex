@@ -3,6 +3,7 @@ defmodule MicroblogWeb.UserSocket do
 
   ## Channels
   # channel "room:*", MicroblogWeb.RoomChannel
+  channel "updates:lobby", MicroblogWeb.UpdatesChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -21,6 +22,16 @@ defmodule MicroblogWeb.UserSocket do
   # performing token verification on connect.
   def connect(_params, socket) do
     {:ok, socket}
+  end
+
+  def connect(%{"token" => token}, socket) do
+    # max_age: 1209600 is equivalent to two weeks in seconds
+    case Phoenix.Token.verify(socket, "user socket", token, max_age: 1209600) do
+      {:ok, user_id} ->
+        {:ok, assign(socket, :user, user_id)}
+      {:error, reason} ->
+        :error
+    end
   end
 
   # Socket id's are topics that allow you to identify all sockets for a given user:

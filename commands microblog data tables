@@ -5,5 +5,6 @@ mix phx.gen.html Blog Following userfollows user_id:references:users follows_use
 mix phx.gen.html Blog Post posts post:text user_id:string 
 mix phx.gen.html Blog Following userfollows user_id:string follows_user_id:string
 
+mix phx.gen.json Blog Like likes post_id:references:posts user_id:references:users
 
 mix ecto.migrate

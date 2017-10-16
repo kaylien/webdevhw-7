@@ -13,6 +13,8 @@
 // to also remove its path from "config.paths.watched".
 import "phoenix_html"
 
+import socket from "./socket"
+
 let handlebars = require("handlebars");
 
 
@@ -123,4 +125,4 @@ $(function() {
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
-// import socket from "./socket"
+
