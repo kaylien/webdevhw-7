@@ -37,6 +37,8 @@ mix ecto.migrate
 mix deps.get
 cd assets;
 npm install
+or if that doesnt work then npm -g install yarn
+then yarn
 ./node_modules/brunch/bin/brunch b -p
 cd ..
 mix phx.digest

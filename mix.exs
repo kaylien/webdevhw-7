@@ -41,6 +41,8 @@ defmodule Microblog.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:distillery, "~> 1.5"},
       {:gettext, "~> 0.11"},
+      {:comeonin, "~> 4.0"},
+      {:argon2_elixir, "~> 1.2"},
       {:cowboy, "~> 1.0"}
     ]
   end
