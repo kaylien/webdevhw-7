@@ -9,6 +9,4 @@ defmodule Microblog.Repo.Migrations.AddPasswords do
       add :pw_last_try, :utc_datetime
     end
   end
-
-  end
 end
