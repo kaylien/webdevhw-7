@@ -92,7 +92,7 @@ defmodule Microblog.Blog do
       [%Post{}, ...]
   """
   def list_posts do
-    Repo.all(Post)
+    Enum.reverse(Repo.all(Post))
   end
 
   @doc """

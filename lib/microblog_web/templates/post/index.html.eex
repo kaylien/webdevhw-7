@@ -1,5 +1,11 @@
 <h2>Listing Posts</h2>
 
+
+<div style="border: 1px solid #777777;padding: 6px;border-radius: 8px;">
+
+<%= render "form.html", Map.put(assigns, :action, post_path(@conn, :create)) %>
+</div>
+
 <table class="table">
   <thead>
     <tr>
@@ -10,6 +16,7 @@
     </tr>
   </thead>
   <tbody>
+
 <%= for post <- @posts do %>
     <tr>
       <td><%= post.post %></td>
